@@ -7,11 +7,14 @@ class PinsController < ApplicationController
   end
 
   def new
-    @pin = Pin.new
+    # @pin = Pin.new #without association
+    # with association, you need to build a new pin from a 'current user'
+    @pin = current_user.pins.build
   end
 
   def create
-    @pin = Pin.new(pin_params)
+    # @pin = Pin.new(pin_params) #without association 
+    @pin = current_user.pins.build(pin_params) #with association 
 
     if @pin.save
       redirect_to @pin, notice: "Successfully created pin!"

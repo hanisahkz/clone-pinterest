@@ -27,6 +27,8 @@ gem 'haml'
 gem 'bootstrap-sass'
 #add simpleform
 gem 'simple_form'
+#add devise
+gem 'devise'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
