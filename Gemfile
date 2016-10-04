@@ -33,6 +33,8 @@ gem 'devise'
 gem 'paperclip'
 #add masonry
 gem 'masonry-rails'
+#for voting
+gem 'acts_as_votable'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
