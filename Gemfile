@@ -31,6 +31,8 @@ gem 'simple_form'
 gem 'devise'
 #add paperclip for imageuploading
 gem 'paperclip'
+#add masonry
+gem 'masonry-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
