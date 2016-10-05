@@ -1,6 +1,9 @@
 class PinsController < ApplicationController
 
   before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :show]
+    #this is needed to prevent unauthorized user from creating, updating pin, or upvote. 
+    # so, when they want to upvote, they will be prompted to sign in
 
   def index
     @pins = Pin.all.order("created_at DESC")
